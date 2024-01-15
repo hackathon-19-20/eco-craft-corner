@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply bg-gray-100;
+}
+
+.hero-container {
+  background-image: url('/hero-background-new.jpg');
+}
+
+.hero-text {
+  @apply text-center;
+  background-color: rgb(255 255 255 / 70%);
+}
+
