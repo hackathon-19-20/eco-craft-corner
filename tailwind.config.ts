@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         primary: "#43766C", // Replace with your desired color code
         secondary: "#76453B", // Replace with your desired color code
+        lightYellow: "#F8FAE5",
       },
     },
   },
