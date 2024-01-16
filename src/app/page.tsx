@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Hero from "./components/home/Hero";
-import ProcessFlow from "./components/home/ProcessFlow";
-import ProductCarousel from "./components/home/ProductCarousel";
+import Hero from "@/components/home/Hero";
+import ProcessFlow from "@/components/home/ProcessFlow";
+import ProductCarousel from "@/components/home/ProductCarousel";
 import { Divider } from "@chakra-ui/react";
 
 export default function Home() {

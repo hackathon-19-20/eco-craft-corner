@@ -1,5 +1,5 @@
 import React from "react";
-import { processList } from "@/app/data/processFlowData";
+import { processList } from "@/data/processFlowData";
 import Image from "next/image";
 
 export default function Features() {
