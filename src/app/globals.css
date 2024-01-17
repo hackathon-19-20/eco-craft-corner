@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --highlight: #43766c;
+    --highlight: hsla(167, 19%, 43%, 0.647);
     --background: #f8fae5;
     --lightBrown: #b19470;
     --darkBrown: #76453b;
@@ -20,6 +20,8 @@
 
     --primary: 168, 28%, 36%;
     --primary-foreground: 0, 0%, 100%;
+    --primary-hover: 167, 19%, 43%, 0.2;
+    --primary-button-hover: 167, 19%, 43%, 0.5;
 
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;

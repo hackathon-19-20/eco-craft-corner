@@ -61,7 +61,11 @@ export const ShopButton = ({
   size: "sm" | "lg" | "icon" | "default";
 }) => {
   return (
-    <Button variant="default" size={size}>
+    <Button
+      variant="default"
+      size={size}
+      className="hover:bg-primary-buttonHover hover:text-gray-800"
+    >
       <FaCartShopping />
       &nbsp;&nbsp;Shop Now
     </Button>
