@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { FaArrowRight } from "react-icons/fa6"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -24,23 +25,30 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   return (
     <div className={cn("grid gap-6", className)} {...props}>
       <form onSubmit={onSubmit}>
-        <div className="grid gap-2">
-          <div className="grid gap-1">
+        <div className="grid gap-4">
+          <div className="grid gap-2">
             <Label className="sr-only" htmlFor="email">
               Email
             </Label>
             <Input
               id="email"
-              placeholder="name@example.com"
+              placeholder="Email"
               type="email"
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
               disabled={isLoading}
             />
+            <Input
+              id="password"
+              placeholder="Password"
+              type="password"
+              autoCorrect="off"
+              disabled={isLoading}
+            />
           </div>
-          <Button disabled={isLoading}>
-            Sign In with Email
+          <Button disabled={isLoading} variant="main">
+            Sign In with Email&nbsp;&nbsp;<FaArrowRight />
           </Button>
         </div>
       </form>

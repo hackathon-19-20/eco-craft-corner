@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { UserAuthForm } from "@/components/authentication/UserSignInForm";
+import { UserAuthForm } from "@/components/authentication/UserRegisterForm";
 
 export const metadata: Metadata = {
   title: "Authentication",
@@ -34,8 +34,8 @@ export default function AuthenticationPage() {
             <UserAuthForm />
 
             <div className="text-sm text-muted-foreground text-center">
-              You don't have an account ? Click&nbsp;
-              <Link href="/sign-in" className=" text-blue-500 hover:text-blue-300">Register</Link>
+              If you have an account click below &nbsp;
+              <Link href="/sign-in" className=" text-blue-500 hover:text-blue-300">Sign In</Link>
             </div>
           </div>
         </div>
