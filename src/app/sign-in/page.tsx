@@ -34,7 +34,7 @@ export default function AuthenticationPage() {
             <UserAuthForm />
 
             <div className="text-sm text-muted-foreground text-center">
-              You don't have an account ? Click&nbsp;
+              You don&apos;t have an account ? Click&nbsp;
               <Link href="/register" className=" text-blue-500 hover:text-blue-300">Register</Link>
             </div>
           </div>
