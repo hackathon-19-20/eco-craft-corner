@@ -35,7 +35,7 @@ export default function AuthenticationPage() {
 
             <div className="text-sm text-muted-foreground text-center">
               You don't have an account ? Click&nbsp;
-              <Link href="/sign-in" className=" text-blue-500 hover:text-blue-300">Register</Link>
+              <Link href="/register" className=" text-blue-500 hover:text-blue-300">Register</Link>
             </div>
           </div>
         </div>
