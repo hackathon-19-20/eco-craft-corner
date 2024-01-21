@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 import { getAllUsers } from "@/lib/api/users/users";
 import { NextResponse } from "next/server";
 
