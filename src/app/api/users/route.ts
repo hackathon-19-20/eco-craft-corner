@@ -1,4 +1,4 @@
-import { getAllUsers } from "@/lib/api/users/users";
+import { getAllUsers } from "@/lib/api/users";
 import { NextResponse } from "next/server";
 
 export const GET =  async () => {
