@@ -4,3 +4,11 @@ interface ECommerceFeature {
   description: string;
   imageUrl: string;
 }
+
+interface UserRegistration {
+  name: string;
+  email: string;
+  phone: number | undefined;
+  password: string;
+  cpassword: string;
+}
