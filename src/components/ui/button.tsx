@@ -4,6 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { FaCartShopping } from "react-icons/fa6";
 
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
@@ -62,14 +63,16 @@ export const ShopButton = ({
   size: "sm" | "lg" | "icon" | "default";
 }) => {
   return (
-    <Button
-      variant="default"
-      size={size}
-      className="hover:bg-primary-buttonHover hover:text-gray-800"
-    >
-      <FaCartShopping />
-      &nbsp;&nbsp;Shop Now
-    </Button>
+    <Link href="/sign-in">
+      <Button
+        variant="default"
+        size={size}
+        className="hover:bg-primary-buttonHover hover:text-gray-800"
+      >
+        <FaCartShopping />
+        &nbsp;&nbsp;Shop Now
+      </Button>
+    </Link>
   );
 };
 

@@ -12,3 +12,8 @@ interface UserRegistration {
   password: string;
   cpassword: string;
 }
+
+interface UserSignin {
+  email: string;
+  password: string;
+}
