@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { FaArrowRight } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -16,7 +16,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [user, setUser] = useState<UserRegistration>({
     name: "",
     email: "",
-    phone : undefined,
+    phone: 0 ,
     password: "",
     cpassword: "",
   });
@@ -30,30 +30,38 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     const password = user.password;
     const phone = user.phone;
 
-    try {
-      const res = await fetch("/api/register", {
-        method: "POST",
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          password,
-        }),
-      });
+    if (user.password === user.cpassword) {
 
-      if (!res.ok) {
-        if (res.status == 422) alert("User Already Exists");
-        alert("Registration Failed");
-      } else {
-        if (res.status == 201) {
-          alert("Registration Successfull!");
-          router.push('/sign-in');
+
+      try {
+        const res = await fetch("/api/register", {
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            password,
+          }),
+        });
+
+        if (!res.ok) {
+          if (res.status == 422) alert("User Already Exists");
+          alert("Registration Failed");
+        } else {
+          if (res.status == 201) {
+            alert("Registration Successfull!");
+            router.push('/sign-in');
+          }
         }
+      } catch (error) {
+        console.log("db error");
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.log("db error");
-    } finally {
+    }else{
+      alert("Password and Confirm password doen not match");
       setIsLoading(false);
+      
     }
   }
 
