@@ -39,7 +39,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         password,
       }),
     });
-    console.log(res);
+
+    // const data = await res.json();
+    // console.log(data);
+    
     if (res.ok) {
       alert("Signed in!");
       router.push("/dashboard");
