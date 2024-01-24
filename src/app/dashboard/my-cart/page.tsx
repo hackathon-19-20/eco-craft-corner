@@ -5,7 +5,7 @@ import { getProducts } from "@/lib/api/products";
 import { ShopButton } from "@/components/ui/button";
 
 
-export const getAllProducts = async () => {
+const getAllProducts = async () => {
     const client = await clientPromise;
     // getting the user details
     const emails = cookies().get("email")?.value;
