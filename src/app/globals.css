@@ -81,3 +81,58 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@media screen and (max-width: 376px) {
+  .feature-item {
+    flex-direction: column;
+  }
+
+  .feature-item > div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .feature-item1 {
+    flex-direction: column;
+  }
+
+  .feature-item1 > div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature-button {
+    max-width: 230px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .feature-button > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 656px) {
+  .feature-button1 {
+    width: 350px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .feature-button1 > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .feature-button1 {
+    width: 400px;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .feature-button1 > div {
+    width: 100%;
+  }
+}

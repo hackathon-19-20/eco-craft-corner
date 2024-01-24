@@ -30,7 +30,7 @@ export default function ProductCarousel() {
   }
 
   return (
-    <div className="flex justify-center items-center gap-8">
+    <div className="flex justify-center items-center gap-8 ">
       <Button
         variant="main"
         onClick={() => {
