@@ -16,7 +16,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [user, setUser] = useState<UserRegistration>({
     name: "",
     email: "",
-    phone: 0 ,
+    phone: undefined ,
     password: "",
     cpassword: "",
   });
