@@ -41,8 +41,8 @@ export default async function MyCart() {
       <h1 className="text-center mb-[3rem] font-  extrabold text-[3rem]">Your Cart</h1>
       <ul className="flex justify-around   flex-wrap">
         {res && res.map((product) => (
-          <div className="shadow-xl max-w-[20rem] m-[2rem] p-[1rem] rounded-lg ">
-          <li className="justify-center items-center text-center" key={product?._id}>
+          <div className="shadow-xl max-w-[20rem] m-[2rem] p-[1rem] rounded-lg "  key={product?._id}>
+          <li className="justify-center items-center text-center">
             <div className="items-center">
             <img className="max-w-[15rem] m-auto hover:max-w-[15.2rem] duration-500" src={product?.img} alt={product?.name} />
             </div>
