@@ -5,6 +5,11 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const client = await clientPromise;
   // getting the user details
   const { name, email, password, phone } = await req.json();
+  console.log(name );
+  console.log(email   );
+  console.log(password);
+  console.log(phone);
+  
 
   if (!name || !email || !password) {
     return new NextResponse("Missing Fields! ", { status: 400 });

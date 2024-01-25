@@ -28,10 +28,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
     setIsLoading(true);
-
+    
     const email = userDetails.email;
     const password = userDetails.password;
-
+    
     const res = await fetch("/api/sign-in", {
       method: "POST",
       body: JSON.stringify({
@@ -40,18 +40,22 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       }),
     });
 
+    // const data = await res.json();
+    // console.log(data);
+    
     if (res.ok) {
       alert("Signed in!");
       router.push("/dashboard");
     } else {
       if(res.status == 420)
-        alert("Password is incorrect! ")
-      else if (res.status == 421)
-        alert("User not reagistered");
-    }
-  }
+      alert("Password is incorrect! ")
+    else if (res.status == 421)
+    alert("User not reagistered");
+}
+setIsLoading(false);
+}
 
-  return (
+return (
     <div className={cn("grid gap-6", className)} {...props}>
       <form onSubmit={onSubmit}>
         <div className="grid gap-4">
