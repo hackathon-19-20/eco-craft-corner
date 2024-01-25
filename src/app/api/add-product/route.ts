@@ -16,7 +16,7 @@ export const POST = async (req: NextRequest) => {
 
     await users.updateOne(
         {email: email},
-        {$push : {"products": newProduct.insertedId}},   
+        {$push : {"products": newProduct.insertedId,}},   
     );
 
     return new NextResponse("New Product Inserted",{status: 201})
