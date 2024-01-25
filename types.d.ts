@@ -25,3 +25,4 @@ des: string;
 img: string;
 price: string;
 }
+

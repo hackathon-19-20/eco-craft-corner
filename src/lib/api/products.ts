@@ -19,7 +19,6 @@ export async function getAllProducts() {
 const getProductById = async (productId : string) => {
   const client = await clientPromise;
   client.connect();
-  console.log(productId);
   const id = new ObjectId(productId)
   const products = client.db("eco-craft-corner").collection("product");
   return await products.findOne<Product>({ _id: id });
