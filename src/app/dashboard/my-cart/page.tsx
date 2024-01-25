@@ -19,7 +19,6 @@ const getAllProducts = async () => {
 
             if (Array.isArray(productsInCart)) {
                 const results = await getProducts({ productIds: productsInCart });
-                console.log("Results:", results);
                 return results;
             } else {
                 console.error("productsInCart is not an array");
