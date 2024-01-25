@@ -20,10 +20,10 @@ const Footer = () => {
       <>
         <footer className="bg-[#f8fae5] text-gray-400">
           <div className="py-5 px-20">
-            <div className="row flex gap-8 px-20 justify-center mb-30">
+            <div className="row flex sm:gap-3 md:gap-5 lg:gap-8 px-20 justify-center mb-30 ">
               <div className="basis-1/3">
-                <div className="single-cta flex justify-center items-center gap-6">
-                  <FaMapMarkerAlt className="text-primary text-3xl" />
+                <div className="single-cta flex justify-center items-center sm:gap-2 md:gap-4 lg:gap-6">
+                  <FaMapMarkerAlt className="text-primary sm:text-xs md:text-base lg:text-3xl" />
                   <div className="cta-text">
                     <h4 className="text-black text-lg font-bold">Find us</h4>
                     <div className=" h-[2px] w-10 bg-secondary mb-1"></div>
@@ -32,8 +32,8 @@ const Footer = () => {
                 </div>
               </div>
               <div className="basis-1/3">
-                <div className="flex justify-center items-center gap-6">
-                  <FaPhone className="text-primary text-3xl" />
+                <div className="flex justify-center items-center sm:gap-2 md:gap-3 lg:gap-6">
+                  <FaPhone className="text-primary sm:text-xs md:text-base lg:text-3xl  " />
                   <div className="cta-text">
                     <h4 className="text-black text-lg font-bold">Call us</h4>
                     <div className=" h-[2px] w-10 bg-secondary mb-1"></div>
@@ -42,8 +42,8 @@ const Footer = () => {
                 </div>
               </div>
               <div className="basis-1/3">
-                <div className="flex justify-center items-center gap-6">
-                  <FaEnvelopeOpen className="text-primary text-3xl" />
+                <div className="flex justify-center items-center lg:gap-6 md:gap-4 sm:gap-3">
+                  <FaEnvelopeOpen className="text-primary sm:text-xs md:text-base lg:text-3xl" />
                   <div className="cta-text">
                     <h4 className="text-black text-lg font-bold">Mail us</h4>
                     <div className="h-[2px] w-10 bg-secondary mb-1"></div>
@@ -54,9 +54,9 @@ const Footer = () => {
             </div>
           </div>
           <Divider />
-          <div className="py-5   px-32">
+          <div className="py-5 md:px-10 md:m-5 px-32">
             <div className="mb-30 flex justify-around">
-              <div className="flex flex-col gap-4 basis-1/2 pl-28">
+              <div className="flex flex-col gap-4 basis-1/2 md:pl-10 md:pr-10">
                 <div className=" text-xl font-semibold">
                   <h3 className="text-black">Useful Links</h3>
                   <div className=" h-1 w-16 bg-secondary"></div>
@@ -77,14 +77,12 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div className="col-xl-4 col-lg-4 mb-50 basis-1/2">
+              <div className="col-xl-4 col-lg-4 mb-50 md:mb-10 basis-1/2 px-10 md:px-0">
                 <div className="footer-widget">
                   <div className="text-black">Logo Here !</div>
                   <div className="footer-text">
                     <p>
-                      Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
-                      sed do eiusmod tempor incididuntut consec tetur
-                      adipisicing elit,Lorem ipsum dolor sit amet.
+                      Lorem ipsum dolor
                     </p>
                   </div>
                   <div className="flex flex-col gap-4 mt-2">
