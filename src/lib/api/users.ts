@@ -4,7 +4,7 @@ export interface UserProps {
   name: string;
   email:string;
   phone:string;
-  products:Array;
+  products:Array<UserProps>; 
 }
 
 export async function getAllUsers(): Promise<UserProps[] | null> {
