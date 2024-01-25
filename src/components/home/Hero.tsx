@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../ui/button";
+import Link from "next/link";
 import { ShopButton } from "../ui/button";
 
 interface square {
@@ -24,7 +24,9 @@ const ShuffleHero = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
           error repellat voluptatibus ad.
         </p>
-        <ShopButton size="lg" />
+        <Link href="/sign-in">
+          <ShopButton size="lg" />
+        </Link>
       </div>
       <ShuffleGrid />
     </section>
