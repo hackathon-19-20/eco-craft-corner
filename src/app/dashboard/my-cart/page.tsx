@@ -49,7 +49,6 @@ export default async function MyCart() {
             <h2 className="font-semibold text-lg">{product?.name}</h2>
             <p><b>Price</b>: ₹{product?.price}</p>
             <p>{product?.des}</p>
-            <ShopButton size="sm" />
           </li>
         </div>
         ))}
