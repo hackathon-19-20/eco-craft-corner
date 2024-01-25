@@ -74,6 +74,7 @@ return (
               autoCorrect="off"
               disabled={isLoading}
               onChange={handleChange}
+              className="feature-button feature-button1"
             />
             <Input
               id="password"
@@ -84,9 +85,10 @@ return (
               autoCorrect="off"
               disabled={isLoading}
               onChange={handleChange}
+              className="feature-button feature-button1"
             />
           </div>
-          <Button disabled={isLoading} variant="main">
+          <Button disabled={isLoading} variant="main" className="feature-button feature-button1" >
             Sign In with Email&nbsp;&nbsp;
             <FaArrowRight />
           </Button>
