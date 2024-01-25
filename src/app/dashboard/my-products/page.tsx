@@ -4,9 +4,11 @@ import { cookies } from "next/headers"
 import { getProducts } from "@/lib/api/products";
 import { ShopButton } from "@/components/ui/button";
 import { AddProducts } from '@/components/dashboard/AddProduct';
+import { unstable_noStore as noStore } from 'next/cache';
 
 
 const getAllProducts = async () => {
+  noStore();
     const client = await clientPromise;
     // getting the user details
     const emails = cookies().get("email")?.value;
@@ -16,8 +18,8 @@ const getAllProducts = async () => {
         const users = client.db("eco-craft-corner").collection("users");
         const currentUser = await users.findOne({ email: emails });
         if (currentUser) {
-            const productsInProduct = currentUser.product;
-console.log(productsInProduct);
+            const productsInProduct = currentUser.products;
+            console.log(productsInProduct);
 
             if (Array.isArray(productsInProduct)) {
                 const results = await getProducts({ productIds: productsInProduct });
@@ -51,7 +53,6 @@ export default async function MyProducts() {
             <h2 className="font-semibold text-lg">{product?.name}</h2>
             <p><b>Price</b>: ₹{product?.price}</p>
             <p>{product?.des}</p>
-            <ShopButton size="sm" />
           </li>
         </div>
         ))}

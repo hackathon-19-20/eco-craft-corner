@@ -5,10 +5,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const client = await clientPromise;
   // getting the user details
   const { name, email, password, phone } = await req.json();
-  console.log(name );
-  console.log(email   );
-  console.log(password);
-  console.log(phone);
   
 
   if (!name || !email || !password) {
@@ -25,7 +21,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
       return new NextResponse("User already exists! ", { status: 422 });
     } else {
       //inserting user details in db
-      const result = await users.insertOne({ name, email, password, phone });
+      const products:string[] = []
+      const cart:string[] = []
+      const result = await users.insertOne({ name, email, password, phone,products ,cart });
       return new NextResponse("User registered! ", { status: 201 });
     }
   } catch (error) {
