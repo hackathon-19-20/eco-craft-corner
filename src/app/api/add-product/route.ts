@@ -5,9 +5,7 @@ import {headers , cookies} from "next/headers"
 export const POST = async (req: NextRequest) => {
   const client = await clientPromise;
   const { name, img, price, des} = await req.json();
-  console.log(name);
   
-
   try {
     await client.connect();
     const products = client.db("eco-craft-corner").collection("product");

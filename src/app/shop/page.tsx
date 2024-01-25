@@ -1,6 +1,7 @@
 import { getAllProducts } from "@/lib/api/products";
 import { unstable_noStore as noStore } from "next/cache";
-import { ShopButton } from "@/components/ui/button";
+import { Button, ShopButton } from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function Shop() {
   noStore();
@@ -9,6 +10,7 @@ export default async function Shop() {
   return (
     <div >
       <h1 className="text-center mb-[3rem] font-  extrabold text-[3rem]">Products</h1>
+      <Link href="/dashboard"><Button variant="main">Dashboard</Button></Link>
       <ul className="flex justify-around   flex-wrap">
         {products && products.map((product) => (
           <div className="shadow-xl max-w-[20rem] m-[2rem] p-[1rem] rounded-lg " key={product._id}>

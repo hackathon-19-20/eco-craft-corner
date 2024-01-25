@@ -63,16 +63,14 @@ export const ShopButton = ({
   size: "sm" | "lg" | "icon" | "default";
 }) => {
   return (
-    <Link href="/sign-in">
-      <Button
-        variant="default"
-        size={size}
-        className="hover:bg-primary-buttonHover hover:text-gray-800"
-      >
-        <FaCartShopping />
-        &nbsp;&nbsp;Shop Now
-      </Button>
-    </Link>
+    <Button
+      variant="default"
+      size={size}
+      className="hover:bg-primary-buttonHover hover:text-gray-800"
+    >
+      <FaCartShopping />
+      &nbsp;&nbsp;Shop Now
+    </Button>
   );
 };
 

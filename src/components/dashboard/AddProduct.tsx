@@ -36,13 +36,13 @@ export function AddProducts() {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <Button variant="outline">Edit Profile</Button>
+                <Button variant="outline">Add Product</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] bg-white">
                 <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogTitle>Add Product</DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when you&apos;re done.
+                        Add new products here. Click Add when you&apos;re done.
                     </DialogDescription>
                 </DialogHeader>
                 <form className="grid gap-4 py-4" onSubmit={submitHandler}>
@@ -71,7 +71,7 @@ export function AddProducts() {
                         </Label>
                         <Input id="des" value={des} onChange={(e) => { setDes(e.target.value) }} className="col-span-3" />
                     </div>
-                    <Button type="submit">Save changes</Button>
+                    <Button type="submit" variant="main">Add Product</Button>
                 </form>
             </DialogContent>
         </Dialog>

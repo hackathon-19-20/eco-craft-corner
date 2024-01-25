@@ -1,10 +1,8 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 import { UserAuthForm } from "@/components/authentication/UserSignInForm";
+import { redirect } from 'next/navigation'
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
   title: "Authentication",
@@ -12,6 +10,11 @@ export const metadata: Metadata = {
 };
 
 export default function AuthenticationPage() {
+  const email = cookies().get("email");
+  if(email){
+    redirect("/shop");
+  }
+
   return (
     <>
       <div className="container relative h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0 bg-[url('/sign-up-background.jpg')] bg-cover bg-center ">
@@ -25,10 +28,10 @@ export default function AuthenticationPage() {
           <div className="w-[400px] flex flex-col justify-center space-y-6  bg-white lg:p-10 lg:px-20 rounded-lg">
             <div className="flex flex-col space-y-2 text-center">
               <h1 className="text-2xl font-semibold tracking-tight">
-                Create an account
+                Sign In
               </h1>
               <p className="text-sm text-muted-foreground">
-                Enter your email below to create your account
+                Enter your email below to sign into your account
               </p>
             </div>
             <UserAuthForm />
