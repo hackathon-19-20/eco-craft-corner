@@ -22,7 +22,7 @@ export default function AuthenticationPage() {
           </div>
         </div>
         <div className="mx-auto">
-          <div className="w-[400px] flex flex-col justify-center space-y-6  bg-white lg:p-10 lg:px-20 rounded-lg">
+          <div className="flex flex-col justify-center space-y-6  bg-white s:p-5 md:p-10 lg:px-20 rounded-lg">
             <div className="flex flex-col space-y-2 text-center">
               <h1 className="text-2xl font-semibold tracking-tight">
                 Create an account

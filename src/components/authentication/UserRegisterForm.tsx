@@ -84,6 +84,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
               defaultValue={user.name}
               onChange={handleInputs}
+              className="feature-button feature-button1"
             />
             <Input
               id="email"
@@ -93,6 +94,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
               defaultValue={user.email}
               onChange={handleInputs}
+              className="feature-button feature-button1"
             />
             <Input
               id="phone"
@@ -102,6 +104,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
               defaultValue={user.phone}
               onChange={handleInputs}
+              className="feature-button feature-button1"
             />
             <Input
               id="password"
@@ -112,6 +115,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
               defaultValue={user.password}
               onChange={handleInputs}
+              className="feature-button feature-button1"
             />
             <Input
               id="cpassword"
@@ -122,9 +126,10 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
               defaultValue={user.cpassword}
               onChange={handleInputs}
+              className="feature-button feature-button1"
             />
           </div>
-          <Button disabled={isLoading} variant="main">
+          <Button disabled={isLoading} variant="main" className="feature-button feature-button1">
             Register with Email&nbsp;&nbsp;
             <FaArrowRight />
           </Button>
