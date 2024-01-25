@@ -17,3 +17,11 @@ interface UserSignin {
   email: string;
   password: string;
 }
+
+interface Product {
+  _id: string; // ObjectId
+name: string;
+des: string;
+img: string;
+price: string;
+}
