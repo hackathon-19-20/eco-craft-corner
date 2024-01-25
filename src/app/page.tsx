@@ -10,7 +10,9 @@ export default function Home() {
       <Hero />
       <Divider />
       <div className="flex justify-around items-center my-5 md:px-10 feature-item1">
-        
+        <div className=" basis-1/2">
+          <ProductCarousel />
+        </div>
         <div className="carousel-content  basis-1/2">
           <h2 className="text-4xl font-bold mb-8 m-8">Browse our goodies</h2>
           <p className=" m-10">
@@ -19,9 +21,7 @@ export default function Home() {
             dolores incidunt minima!
           </p>
         </div>
-        <div className=" basis-1/2">
-          <ProductCarousel />
-        </div>
+        
       </div>
       <Divider />
       <div className="my-5">

@@ -86,6 +86,9 @@
 @media screen and (max-width: 376px) {
   .feature-item {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
   }
 
   .feature-item > div {
@@ -95,7 +98,7 @@
 
 @media screen and (max-width: 500px) {
   .feature-item1 {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .feature-item1 > div {

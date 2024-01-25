@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <ul className="flex flex-col sm:px-4 md:px-16">
+    <ul className="flex flex-col sm:px-4 sm:py-10 md:px-16">
       {processList.map((feature, index) => {
         const isEven = index % 2 === 0;
         const flexClass = isEven ? "flex-row-reverse" : "flex-row";
@@ -20,8 +20,7 @@ export default function Features() {
                 width={300}
                 height={300}
                 alt={`feature-${feature.key}`}
-               
-                
+
               />
             </div>
             <div className="w-full md:w-1/2 md:text-left ">
