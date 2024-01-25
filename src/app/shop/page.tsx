@@ -1,6 +1,6 @@
 import { getAllProducts } from "@/lib/api/products";
 import { unstable_noStore as noStore } from "next/cache";
-import { Button, ShopButton } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default async function Shop() {
@@ -21,7 +21,8 @@ export default async function Shop() {
             <h2 className="font-semibold text-lg">{product.name}</h2>
             <p><b>Price</b>: ₹{product.price}</p>
             <p>{product.des}</p>
-            <ShopButton size="sm" />
+            
+            <Button>Add to cart</Button>
           </li>
         </div>
         ))}

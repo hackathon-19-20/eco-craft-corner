@@ -16,7 +16,6 @@ const getAllProducts = async () => {
         const currentUser = await users.findOne({ email: emails });
         if (currentUser) {
             const productsInCart = currentUser.cart;
-console.log(productsInCart);
 
             if (Array.isArray(productsInCart)) {
                 const results = await getProducts({ productIds: productsInCart });
