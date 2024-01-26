@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <div className="logo ">
       <Link href="/">
-        <Image src="/Logo.png" alt="Logo" className="h-[6rem] w-[13rem] p-2 mt-5" />
+        <Image src="/Logo.png" alt="Logo" height={200} width={200} className="p-2 mt-5" />
 
       </Link>
 
