@@ -4,6 +4,8 @@ import { ShopButton } from "@/components/ui/button";
 import clientPromise from "@/lib/mongodb";
 import { cookies } from "next/headers";
 import { UserProps, getUserByEmail } from "@/lib/api/users";
+import Image from "next/image";
+import img from '../../../public/dashimg.png'
 
 export default async function Dashboard() {
   const client = await clientPromise;
@@ -26,9 +28,9 @@ export default async function Dashboard() {
       </Link>
         </div>
 
-      <div className="flex justify-around shadow-xl ">
+      <div className="flex justify-around ">
         <div className="my-auto">
-          <img src="https://th.bing.com/th/id/OIP.F9y1qSOILWsXCGPigyjepwHaHa?pid=ImgDet&w=474&h=474&rs=1" alt="" />
+          <Image src="/dashimg.png" height={500} width={400} alt="dashboard"/>
         </div>
         <div className="items-center my-auto justify-start">
 

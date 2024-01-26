@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { ShopButton } from "./ui/button";
+import Logo from "@/components/ui/ui_logo";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -27,18 +28,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-darkBrown bg-amber-50 sticky nav">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-darkBrown bg-white sticky nav">
       <div>
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
         <h1 className="text-5xl font-signature ml-2">
-          <a
-            className="link-underline link-underline-black"
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          >
-            Logo
-          </a>
+      <Logo />
+            
         </h1>
       </div>
 
@@ -46,12 +41,14 @@ const Navbar = () => {
         {links.map(({ id, link , href}) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-black duration-200 link-underline"
           >
             <Link href={href}>{link}</Link>
           </li>
         ))}
-        <ShopButton size="sm"/>
+        <Link href="/sign-in">
+          <ShopButton size="default" />
+        </Link>
       </ul>
 
       <div

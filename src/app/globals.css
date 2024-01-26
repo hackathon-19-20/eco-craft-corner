@@ -9,6 +9,7 @@
     --lightBrown: #b19470;
     --darkBrown: #76453b;
     
+    
     /* --background: 0 0% 100%; */
     /* --foreground: 0 0% 3.9%; */
 
@@ -139,3 +140,7 @@
     width: 100%;
   }
 }
+
+.logo1{
+   filter: drop-shadow(0px 10px 10px rgba(4, 4, 4, 1)); 
+  }

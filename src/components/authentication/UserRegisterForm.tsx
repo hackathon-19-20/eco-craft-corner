@@ -2,12 +2,12 @@
 
 import React, { useState, ChangeEvent, use } from "react";
 
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FaArrowRight } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
-
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
