@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ShopButton } from "../ui/button";
+import Navbar from "../Navbar";
 
 interface square {
   id: number;
@@ -12,6 +13,8 @@ interface square {
 
 const ShuffleHero = () => {
   return (
+    <div>
+      <Navbar/>
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
       <div>
         <span className="block mb-4 text-xs md:text-sm text-primary font-medium">
@@ -30,13 +33,14 @@ const ShuffleHero = () => {
       </div>
       <ShuffleGrid />
     </section>
+</div>
   );
 };
 
 const shuffle = (array: square[]) => {
   let currentIndex = array.length,
-    randomIndex;
-
+  randomIndex;
+  
   while (currentIndex != 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
