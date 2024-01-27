@@ -24,8 +24,7 @@ const ShuffleHero = () => {
           Let&apos;s change it up a bit
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
-          error repellat voluptatibus ad.
+          Our mission is to incentivize the creation of value from waste, reduce environmental impact, and promote a circular economy.
         </p>
         <Link href="/sign-in">
           <ShopButton size="lg" />
