@@ -1,6 +1,8 @@
 import { NextResponse, NextRequest } from "next/server";
 import clientPromise from "@/lib/mongodb";
 import {headers , cookies} from "next/headers"
+const bcrypt = require("bcrypt");
+
 
 export const POST = async (req: NextRequest) => {
   const client = await clientPromise;
@@ -19,10 +21,15 @@ export const POST = async (req: NextRequest) => {
     // console.log(currentUser);
     // console.log(id);
     
-    cookies().set("email",email);
+    
     
     if (currentUser) {
-      if (password === currentUser.password) {
+
+      const isMatch = await bcrypt.compare(password, currentUser.password);
+
+
+      if (isMatch) {
+        cookies().set("email",email);
         return new NextResponse("User Signed in Successfully! ", {
           status: 201,
         });
