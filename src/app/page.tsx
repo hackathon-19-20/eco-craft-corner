@@ -16,9 +16,7 @@ export default function Home() {
         <div className="carousel-content  basis-1/2">
           <h2 className="text-4xl font-bold mb-8 m-8">Browse our goodies</h2>
           <p className=" m-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium, ex ipsam! Sunt tempore optio earum veniam officiis
-            dolores incidunt minima!
+            EcoCraft Corner is a platform designed to address the waste crisis by fostering a sustainable marketplace where users can buy and sell products made from waste and recyclable materials.
           </p>
         </div>
         
