@@ -79,10 +79,9 @@ const Footer = () => {
 
               <div className="col-xl-4 col-lg-4 mb-50 md:mb-10 basis-1/2 px-10 md:px-0">
                 <div className="footer-widget">
-                  <div className="text-black">Logo Here !</div>
+                  <div className="text-black"></div>
                   <div className="footer-text">
                     <p>
-                      Lorem ipsum dolor
                     </p>
                   </div>
                   <div className="flex flex-col gap-4 mt-2">
