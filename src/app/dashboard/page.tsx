@@ -21,8 +21,8 @@ export default async function Dashboard() {
   return (
     <div>
 
-    <div className="flex justify-around items-center">
-      <div>Dashboard</div>
+    <div className="flex justify-between items-center">
+      <div className="text-xl font-bold">Dashboard</div>
       <Link href="/shop">
         <ShopButton size="lg" />
       </Link>
@@ -32,14 +32,17 @@ export default async function Dashboard() {
         <div className="my-auto">
           <Image src="/dashimg.png" height={500} width={400} alt="dashboard"/>
         </div>
-        <div className="items-center my-auto justify-start">
+        <div className="my-20 items-center justify-start">
 
         {user && (
-          <div className="text-[1.5rem]">
-            <p><b>Name</b><br/> {user.name}</p>
-            <p><b>Email</b><br/> {user.email}</p>
-            <p><b>Phone</b><br/> {user.phone}</p>
-            <p><b>Your Products</b>: {user.products.length}</p>
+          <div className="text-[1.3rem]">
+            <p className="p-3 shadow-md rounded-lg"><b>Name: </b> {user.name}</p>
+            <br/>
+            <p className="p-3 shadow-md rounded-lg"><b>Email: </b>{user.email}</p>
+            <br/>
+            <p className="p-3 shadow-md rounded-lg"><b>Phone: </b> {user.phone}</p>
+            <br/>
+            <p className="p-3 shadow-md rounded-lg"><b>Your Products: </b> {user.products.length}</p>
             
           </div>
         )}
