@@ -34,3 +34,4 @@ export async function getProducts({ productIds }: { productIds: string[] }) {
     return null;
   }
 }
+

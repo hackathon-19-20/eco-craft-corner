@@ -41,7 +41,7 @@ export default function ProductCard({
           <Heading size="md">{heading}</Heading>
           <Text>{desc}</Text>
           <Text color="blue.600" fontSize="2xl">
-            ${price}
+            {price}
           </Text>
         </Stack>
       </CardBody>

@@ -2,9 +2,9 @@ import clientPromise from "@/lib/mongodb";
 
 export interface UserProps {
   name: string;
-  email:string;
-  phone:string;
-  products:Array<UserProps>; 
+  email: string;
+  phone: string;
+  products: Array<UserProps>;
 }
 
 export async function getAllUsers(): Promise<UserProps[] | null> {
@@ -21,7 +21,6 @@ export async function getAllUsers(): Promise<UserProps[] | null> {
   }
 }
 
-
 export async function getUserByEmail(email: string): Promise<UserProps | null> {
   const client = await clientPromise;
   const collection = client.db("eco-craft-corner").collection("users");
@@ -30,3 +29,4 @@ export async function getUserByEmail(email: string): Promise<UserProps | null> {
 
   return user || null;
 }
+

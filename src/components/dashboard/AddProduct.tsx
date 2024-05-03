@@ -26,7 +26,6 @@ export function AddProducts() {
             method: "POST",
             body: JSON.stringify({ name, img, price, des }),
         })
-        console.log(res);
         setOpen(false)
         alert("Succesfully Posted your Product")
     }
@@ -36,7 +35,7 @@ export function AddProducts() {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <Button variant="outline">Add Product</Button>
+                <Button variant="outline" >Add Product</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] bg-white">
                 <DialogHeader>
